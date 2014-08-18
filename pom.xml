@@ -28,6 +28,14 @@
           </plugin>
       </plugins>
    </pluginManagement>
+   <resources>
+     <resource>
+       <directory>.</directory>
+       <includes>
+         <include>plugin.yml</include>
+       </includes>
+     </resource>
+   </resources>
    </build>
     <repositories>
        <repository>
