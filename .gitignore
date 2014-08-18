@@ -1,0 +1,7 @@
+*~
+src/resources
+src/test
+target
+.settings
+.classpath
+.project

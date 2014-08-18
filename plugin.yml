@@ -1,0 +1,5 @@
+name: KeepBabyMobs
+main: io.github.tompreuss.keepbabymobs.KeepBabyMobs
+version: 0.1
+author: tompreuss
+website: http://github.com/tompreuss/KeepBabyMobs
