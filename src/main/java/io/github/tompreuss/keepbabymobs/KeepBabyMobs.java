@@ -33,26 +33,26 @@ public final class KeepBabyMobs extends JavaPlugin implements Listener {
                     if (item != null) { // has item in hand
                         if (item.getType() == Material.NAME_TAG) { // item is name tag
                             ItemMeta meta = item.getItemMeta();
-                            if (meta.hasDisplayName()) { // name tag has a name on it
-                                if (entity instanceof Ageable) { // entity is one that has babies
-                                    if (((Ageable) entity).isAdult() == false) { // entity is a baby
-                                        ((Ageable) entity).setAgeLock(true); // age lock the baby
-                                        
-                                        player.sendMessage(ChatColor.GOLD + "That mob has now been age locked. How adorable!"); // tell the player
-                                        
-                                        // make sure it's logged
-                                        
-                                        EntityType entitytype = entity.getType();
-                                        Location location = entity.getLocation();
-                                        String playername = player.getName();
-                                        String name = meta.getDisplayName();
-                                                                                                                
-                                        String locationlog = location.getWorld().getName() + " " + location.getBlockX() + " " + location.getBlockY() + " " + location.getBlockZ();
-                                        
-                                        getLogger().info(playername + " age locked " + entitytype + " named " + name + " at "  + locationlog );
+                                if (meta.hasDisplayName()) { // name tag has a name on it
+                                    if (entity instanceof Ageable) { // entity is one that has babies
+                                        if (((Ageable) entity).isAdult() == false) { // entity is a baby
+                                            ((Ageable) entity).setAgeLock(true); // age lock the baby
+                                            
+                                            player.sendMessage(ChatColor.GOLD + "That mob has now been age locked. How adorable!"); // tell the player
+                                            
+                                            // make sure it's logged
+                                            
+                                            EntityType entitytype = entity.getType();
+                                            Location location = entity.getLocation();
+                                            String playername = player.getName();
+                                            String name = meta.getDisplayName();
+                                                                                                                    
+                                            String locationlog = location.getWorld().getName() + " " + location.getBlockX() + " " + location.getBlockY() + " " + location.getBlockZ();
+                                            
+                                            getLogger().info(playername + " age locked " + entitytype + " named " + name + " at "  + locationlog );
+                                        }
                                     }
                                 }
-                            }
                         }
                     }
             }
