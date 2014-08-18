@@ -4,6 +4,7 @@
   <artifactId>KeepBabyMobs</artifactId>
   <version>0.1</version>
    <build>
+   <pluginManagement>
       <plugins>
           <plugin>
               <groupId>org.apache.maven.plugins</groupId>
@@ -15,6 +16,7 @@
               </configuration>
           </plugin>
       </plugins>
+   </pluginManagement>
    </build>
     <repositories>
        <repository>
