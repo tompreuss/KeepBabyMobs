@@ -23,7 +23,7 @@ public final class KeepBabyMobs extends JavaPlugin implements Listener {
         getServer().getPluginManager().registerEvents(this, this);
     }
     
-    // if player right clicks on a baby mob with a name tag, age lock the baby
+    // if player names a baby mob with a name tag, age lock the baby
     @EventHandler(priority = EventPriority.NORMAL)
     public void onPlayerInteractEntityEvent(PlayerInteractEntityEvent event) {
         Entity entity = event.getRightClicked();
