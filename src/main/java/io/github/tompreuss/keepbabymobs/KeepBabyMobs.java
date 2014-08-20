@@ -38,7 +38,8 @@ public final class KeepBabyMobs extends JavaPlugin implements Listener {
                                         if (((Ageable) entity).isAdult() == false) { // entity is a baby
                                             ((Ageable) entity).setAgeLock(true); // age lock the baby
                                             
-                                            player.sendMessage(ChatColor.GOLD + "That mob has now been age locked. How adorable!"); // tell the player
+                                            player.sendMessage(ChatColor.GOLD + "That mob has now been age locked. "
+                                                    + "How adorable!"); // tell the player
                                             
                                             // make sure it's logged
                                             
@@ -47,9 +48,12 @@ public final class KeepBabyMobs extends JavaPlugin implements Listener {
                                             String playername = player.getName();
                                             String name = meta.getDisplayName();
                                                                                                                     
-                                            String locationlog = location.getWorld().getName() + " " + location.getBlockX() + " " + location.getBlockY() + " " + location.getBlockZ();
+                                            String locationlog = location.getWorld().getName() + " "
+                                            + location.getBlockX() + " " + location.getBlockY() + " "
+                                                    + location.getBlockZ();
                                             
-                                            getLogger().info(playername + " age locked " + entitytype + " named " + name + " at "  + locationlog );
+                                            getLogger().info(playername + " age locked " + entitytype + " named " 
+                                                    + name + " at "  + locationlog );
                                         }
                                     }
                                 }
