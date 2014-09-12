@@ -61,6 +61,10 @@ public final class KeepBabyMobs extends JavaPlugin implements Listener {
                                     if (entity instanceof Ageable) { // entity is one that has babies
                                         if (((Ageable) entity).isAdult() == false) { // entity is a baby
                                             ((Ageable) entity).setAgeLock(true); // age lock the baby
+
+                                            // set age as low as possible in case another plugin changed age
+                                            // before baby was age locked
+                                            ((Ageable) entity).setAge(Integer.MIN_VALUE); 
                                             
                                             player.sendMessage(ChatColor.GOLD + "That mob has now been age locked. "
                                                     + "How adorable!"); // tell the player
