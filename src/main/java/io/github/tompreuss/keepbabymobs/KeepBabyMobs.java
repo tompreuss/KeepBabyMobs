@@ -64,7 +64,10 @@ public final class KeepBabyMobs extends JavaPlugin implements Listener {
 
                                             // set age as low as possible in case another plugin changed age
                                             // before baby was age locked
-                                            ((Ageable) entity).setAge(Integer.MIN_VALUE); 
+                                            // but not horses, since they're weird with ages
+                                            if (!(entity instanceof Horse)) {
+                                                ((Ageable) entity).setAge(Integer.MIN_VALUE);
+                                            }
                                             
                                             player.sendMessage(ChatColor.GOLD + "That mob has now been age locked. "
                                                     + "How adorable!"); // tell the player
